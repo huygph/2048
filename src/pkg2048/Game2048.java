@@ -78,7 +78,7 @@ public class Game2048 extends javax.swing.JFrame {
             
         }
         if ( t == 4 ) 
-            JOptionPane.showMessageDialog(null, "can move");
+            JOptionPane.showMessageDialog(null, "can't move");
         else {
             saveundo();
     for ( int j = 0; j < 4; j++){
@@ -146,7 +146,7 @@ public class Game2048 extends javax.swing.JFrame {
             
         }
         if ( t == 4 ) 
-            JOptionPane.showMessageDialog(null, "can move");
+            JOptionPane.showMessageDialog(null, "can't move");
         else {
             saveundo();
           
@@ -214,7 +214,7 @@ public class Game2048 extends javax.swing.JFrame {
             
         }
         if ( t == 4 ) 
-            JOptionPane.showMessageDialog(null, "can move");
+            JOptionPane.showMessageDialog(null, "can't move");
         else {
             saveundo();
           
