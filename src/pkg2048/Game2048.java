@@ -283,7 +283,7 @@ public class Game2048 extends javax.swing.JFrame {
             
         }
         if ( t == 4 ) 
-            JOptionPane.showMessageDialog(null, "can move");
+            JOptionPane.showMessageDialog(null, "can't move");
         else {
             saveundo();
           
