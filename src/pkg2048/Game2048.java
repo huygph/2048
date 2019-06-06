@@ -6,6 +6,7 @@ import java.util.Stack;
 import javax.swing.JOptionPane;
 public class Game2048 extends javax.swing.JFrame {
     public int [][] Board;
+    private int score;
     public Stack<Integer> undo;
     public Stack<Integer> redo;
     public int [] array;
@@ -107,6 +108,7 @@ public class Game2048 extends javax.swing.JFrame {
                         }
                         else {
                         Board[I][j] *= 2;
+                        score += Board[I][j];
                         checkCombine[I] = "combined";
                         Board[i][j] = 0;}
                     }
@@ -175,6 +177,7 @@ public class Game2048 extends javax.swing.JFrame {
                         }
                         else {
                         Board[I][j] *= 2;
+                        score += Board[I][j];
                         checkCombine[I] = "combined";
                         Board[i][j] = 0;}
                     }
@@ -243,6 +246,7 @@ public class Game2048 extends javax.swing.JFrame {
                         }
                         else{
                         Board[i][J] *= 2;
+                        score += Board[i][J];
                         checkCombine[J] = "combined";
                         Board[i][j] = 0;
                     }
@@ -311,6 +315,7 @@ public class Game2048 extends javax.swing.JFrame {
                         }
                         else {
                         Board[i][J] *= 2;
+                        score += Board[i][J];
                         checkCombine[J] = "combined";
                         Board[i][j] = 0;}
                     }
@@ -353,6 +358,10 @@ public class Game2048 extends javax.swing.JFrame {
                 Board[i][j] = redo.pop();
             }
         }}
+    }
+      
+      public int getScore(){
+        return score;
     }
 }
 

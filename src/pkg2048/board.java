@@ -37,7 +37,7 @@ public class board extends javax.swing.JFrame {
         o16 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Jscore = new javax.swing.JLabel();
         undo = new javax.swing.JButton();
         redo = new javax.swing.JButton();
         back = new javax.swing.JButton();
@@ -183,14 +183,14 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(270, 60, 100, 40);
 
-        jLabel1.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel1.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("4");
-        jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(170, 60, 90, 40);
+        Jscore.setBackground(new java.awt.Color(153, 153, 153));
+        Jscore.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
+        Jscore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Jscore.setText("0");
+        Jscore.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
+        Jscore.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Jscore);
+        Jscore.setBounds(170, 60, 90, 40);
 
         undo.setBackground(new java.awt.Color(255, 255, 255));
         undo.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
@@ -208,7 +208,7 @@ public class board extends javax.swing.JFrame {
         redo.setBackground(new java.awt.Color(255, 255, 255));
         redo.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
         redo.setForeground(new java.awt.Color(255, 255, 255));
-        redo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/icons8-available-updates-24.png"))); // NOI18N
+        redo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/redo.png"))); // NOI18N
         redo.setBorderPainted(false);
         redo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -570,18 +570,22 @@ public class board extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_UP) {
             game2048.Up();
             showboard();
+            updateScore();
         }
          if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
             game2048.Left();
             showboard();
+            updateScore();
         }
           if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
             game2048.Down();
             showboard();
+            updateScore();
         }
            if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
             game2048.Right();
             showboard();
+            updateScore();
         }
     }//GEN-LAST:event_startKeyPressed
 
@@ -593,6 +597,9 @@ public class board extends javax.swing.JFrame {
     private void keyPressed(java.awt.event.KeyEvent evt) {
         
     }
+    public void updateScore(){
+                Jscore.setText(Integer.toString(game2048.getScore()));
+            }
     
     /**
      * @param args the command line arguments
@@ -630,8 +637,8 @@ public class board extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Jscore;
     private javax.swing.JButton back;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
