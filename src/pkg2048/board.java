@@ -79,78 +79,91 @@ public class board extends javax.swing.JFrame {
         o1.setBounds(80, 160, 60, 60);
 
         o4.setBackground(new java.awt.Color(255, 255, 153));
+        o4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o4.setOpaque(true);
         getContentPane().add(o4);
         o4.setBounds(260, 160, 60, 60);
 
         o12.setBackground(new java.awt.Color(255, 255, 153));
+        o12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o12.setOpaque(true);
         getContentPane().add(o12);
         o12.setBounds(260, 280, 60, 60);
 
         o3.setBackground(new java.awt.Color(255, 204, 0));
+        o3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o3.setOpaque(true);
         getContentPane().add(o3);
         o3.setBounds(200, 160, 60, 60);
 
         o10.setBackground(new java.awt.Color(255, 255, 153));
+        o10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o10.setOpaque(true);
         getContentPane().add(o10);
         o10.setBounds(140, 280, 60, 60);
 
         o8.setBackground(new java.awt.Color(255, 204, 0));
+        o8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o8.setOpaque(true);
         getContentPane().add(o8);
         o8.setBounds(260, 220, 60, 60);
 
         o6.setBackground(new java.awt.Color(255, 204, 0));
+        o6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o6.setOpaque(true);
         getContentPane().add(o6);
         o6.setBounds(140, 220, 60, 60);
 
         o13.setBackground(new java.awt.Color(255, 255, 153));
+        o13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o13.setOpaque(true);
         getContentPane().add(o13);
         o13.setBounds(80, 340, 60, 60);
 
         o5.setBackground(new java.awt.Color(255, 255, 153));
+        o5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o5.setOpaque(true);
         getContentPane().add(o5);
         o5.setBounds(80, 220, 60, 60);
 
         o11.setBackground(new java.awt.Color(255, 204, 0));
+        o11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o11.setOpaque(true);
         getContentPane().add(o11);
         o11.setBounds(200, 280, 60, 60);
 
         o15.setBackground(new java.awt.Color(255, 255, 153));
+        o15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o15.setOpaque(true);
         getContentPane().add(o15);
         o15.setBounds(200, 340, 60, 60);
 
         o14.setBackground(new java.awt.Color(255, 204, 0));
+        o14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o14.setOpaque(true);
         getContentPane().add(o14);
         o14.setBounds(140, 340, 60, 60);
 
         o7.setBackground(new java.awt.Color(255, 255, 153));
+        o7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o7.setOpaque(true);
         getContentPane().add(o7);
         o7.setBounds(200, 220, 60, 60);
 
         o16.setBackground(new java.awt.Color(255, 204, 0));
+        o16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         o16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         o16.setOpaque(true);
         getContentPane().add(o16);
@@ -517,23 +530,7 @@ public class board extends javax.swing.JFrame {
           o16.setIcon(null);
 
        
-       /*
-        o1.setText(Integer.toString(game2048.Board[0][0]));
-        o2.setText(Integer.toString(game2048.Board[0][1]));
-        o3.setText(Integer.toString(game2048.Board[0][2]));
-        o4.setText(Integer.toString(game2048.Board[0][3]));
-        o5.setText(Integer.toString(game2048.Board[1][0]));
-        o6.setText(Integer.toString(game2048.Board[1][1]));
-        o7.setText(Integer.toString(game2048.Board[1][2]));
-        o8.setText(Integer.toString(game2048.Board[1][3]));
-        o9.setText(Integer.toString(game2048.Board[2][0]));
-        o10.setText(Integer.toString(game2048.Board[2][1]));
-        o11.setText(Integer.toString(game2048.Board[2][2]));
-        o12.setText(Integer.toString(game2048.Board[2][3]));
-        o13.setText(Integer.toString(game2048.Board[3][0]));
-        o14.setText(Integer.toString(game2048.Board[3][1]));
-        o15.setText(Integer.toString(game2048.Board[3][2]));
-        o16.setText(Integer.toString(game2048.Board[3][3]));*/
+     
     }
     private void undoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_undoActionPerformed
     

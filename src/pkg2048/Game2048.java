@@ -9,6 +9,7 @@ public class Game2048 extends javax.swing.JFrame {
     public Stack<Integer> undo;
     public Stack<Integer> redo;
     public int [] array;
+    public String checkend;
     public Game2048(){
         Board = new int[4][4];
         undo = new Stack<Integer>();
@@ -21,14 +22,16 @@ public class Game2048 extends javax.swing.JFrame {
             System.out.printf("%6d%6d%6d%6d%n%n", x[0],x[1],x[2],x[3]);
         
     }
-   
+ 
     public void addRandom()
     {
+       
+            
         
         Random r = new Random();
         //chose random position
-        int x = r.nextInt(3);
-        int y = r.nextInt(3);
+        int x = r.nextInt(4);
+        int y = r.nextInt(4);
         if (Board[x][y] == 0) {
         // add random number ( 2 or 4) if that positon is blank
          double v = new Double(1.23);
@@ -42,10 +45,41 @@ public class Game2048 extends javax.swing.JFrame {
                 Board[x][y] = a;}
         else
             addRandom();
+   
         }
+        
 
     public void Up() {
-        saveundo();
+        
+        int t = 0;
+        for (int a = 0; a < 4; a ++) {
+           
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a]) && (Board[2][a] != Board[3][a]) && Board[3][a] != 0 && Board[2][a] != 0 && Board[1][a] != 0 && Board[0][a] != 0 )
+               t ++;
+            else if (Board[3][a] == 0 && Board[2][a] == 0 && Board[1][a] == 0  && Board[0][a] == 0) {
+            
+               t ++;
+            }
+            else if (Board[3][a] == 0 && Board[2][a] == 0 && Board[1][a] == 0 && Board[0][a] != 0  ) {
+            if ( Board[0][a] != Board[1][a]   )
+               t ++;
+            }
+            else if (Board[3][a] == 0 && Board[2][a] == 0 && Board[1][a] != 0 && Board[0][a] != 0 ) {
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a])  )
+               t ++;
+            }
+            else if (Board[3][a] == 0 && Board[2][a] != 0 && Board[1][a] != 0 && Board[0][a] != 0) {
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a]) )
+               t ++;
+            }
+            
+            
+            
+        }
+        if ( t == 4 ) 
+            JOptionPane.showMessageDialog(null, "can move");
+        else {
+            saveundo();
     for ( int j = 0; j < 4; j++){
          String[] checkCombine = { "no", "no","no","no"};
             for (int i = 1; i <4;i++){
@@ -78,11 +112,41 @@ public class Game2048 extends javax.swing.JFrame {
                     }
                 }
             }
-}
-    addRandom();
+    } addRandom();
+        }
+        
+    
 }
      public void Down() {
-      saveundo();
+      int t = 0;
+        for (int a = 0; a < 4; a ++) {
+           
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a]) && Board[3][a] != 0 && Board[2][a] != 0 && Board[1][a] != 0 && Board[0][a] != 0 )
+               t ++;
+            else if (Board[3][a] == 0 && Board[2][a] == 0 && Board[1][a] == 0  && Board[0][a] == 0) {
+            
+               t ++;
+            }
+            else if (Board[0][a] == 0 && Board[1][a] == 0 && Board[2][a] == 0 && Board[3][a] != 0  ) {
+            if ( Board[0][a] != Board[1][a]   )
+               t ++;
+            }
+            else if (Board[0][a] == 0 && Board[1][a] == 0 && Board[2][a] != 0 && Board[3][a] != 0 ) {
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a])  )
+               t ++;
+            }
+            else if (Board[0][a] == 0 && Board[1][a] != 0 && Board[2][a] != 0 && Board[3][a] != 0) {
+            if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a])  )
+               t ++;
+            }
+            
+            
+            
+        }
+        if ( t == 4 ) 
+            JOptionPane.showMessageDialog(null, "can move");
+        else {
+            saveundo();
           
     for ( int j = 0; j < 4; j++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -119,8 +183,38 @@ public class Game2048 extends javax.swing.JFrame {
 }
     addRandom();
 }
+     }
     public void Left() {
-        saveundo();
+        int t = 0;
+        for (int a = 0; a < 4; a ++) {
+           
+            if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3])  && Board[a][3] != 0 && Board[a][0] != 0 && Board[a][1] != 0 && Board[a][2] != 0 )
+               t ++;
+            else if (Board[a][3] == 0 && Board[a][2] == 0 && Board[a][1] == 0  && Board[a][0] == 0) {
+            
+               t ++;
+            }
+            else if (Board[a][3] == 0 && Board[a][2] == 0 && Board[a][1] == 0 && Board[a][0] != 0  ) {
+            if ( Board[a][0] != Board[a][1]   )
+               t ++;
+            }
+            else if (Board[a][3] == 0 && Board[a][2] == 0 && Board[a][1] != 0 && Board[a][0] != 0 ) {
+            if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2])  )
+               t ++;
+            }
+            else if (Board[a][3] == 0 && Board[a][2] != 0 && Board[a][1] != 0 && Board[a][3] != 0) {
+            if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3]) )
+               t ++;
+            }
+            
+            
+            
+        }
+        if ( t == 4 ) 
+            JOptionPane.showMessageDialog(null, "can move");
+        else {
+            saveundo();
+          
          
     for ( int i = 0; i < 4; i++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -157,8 +251,38 @@ public class Game2048 extends javax.swing.JFrame {
 }
 }
     addRandom();}
+    }
         public void Right() {
-        saveundo();
+        int t = 0;
+        for (int a = 0; a < 4; a ++) {
+           
+            if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3])  && Board[a][3] != 0 && Board[a][0] != 0 && Board[a][1] != 0 && Board[a][2] != 0 )
+               t ++;
+            else if (Board[a][3] == 0 && Board[a][2] == 0 && Board[a][1] == 0  && Board[a][0] == 0) {
+            
+               t ++;
+            }
+            else if (Board[a][0] == 0 && Board[a][1] == 0 && Board[a][2] == 0 && Board[a][3] != 0  ) {
+            if ( Board[a][3] != Board[a][2]   )
+               t ++;
+            }
+            else if (Board[a][0] == 0 && Board[a][1] == 0 && Board[a][2] != 0 && Board[a][3] != 0 ) {
+            if ( (Board[a][3] != Board[a][2])&& (Board[a][2] != Board[a][1])  )
+               t ++;
+            }
+            else if (Board[a][0] == 0 && Board[a][2] != 0 && Board[a][1] != 0 && Board[a][3] != 0) {
+            if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3]) )
+               t ++;
+            }
+            
+            
+            
+        }
+        if ( t == 4 ) 
+            JOptionPane.showMessageDialog(null, "can move");
+        else {
+            saveundo();
+          
          
     for ( int i = 0; i < 4; i++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -192,7 +316,7 @@ public class Game2048 extends javax.swing.JFrame {
                     }
                 }
             }
-} addRandom();
+} addRandom();}
 }
     public void saveundo() {
         for ( int i = 0 ; i < 4 ; i ++) {
