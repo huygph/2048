@@ -6,6 +6,7 @@
 package pkg2048;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 import static javax.swing.SwingConstants.*;
 public class board extends javax.swing.JFrame {
     public static Game2048 game2048;
@@ -38,7 +39,7 @@ public class board extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         undo = new javax.swing.JButton();
-        reset = new javax.swing.JButton();
+        redo = new javax.swing.JButton();
         back = new javax.swing.JButton();
         start = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -191,18 +192,18 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(undo);
         undo.setBounds(210, 120, 30, 30);
 
-        reset.setBackground(new java.awt.Color(255, 255, 255));
-        reset.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
-        reset.setForeground(new java.awt.Color(255, 255, 255));
-        reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/icons8-available-updates-24.png"))); // NOI18N
-        reset.setBorderPainted(false);
-        reset.addActionListener(new java.awt.event.ActionListener() {
+        redo.setBackground(new java.awt.Color(255, 255, 255));
+        redo.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
+        redo.setForeground(new java.awt.Color(255, 255, 255));
+        redo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/icons8-available-updates-24.png"))); // NOI18N
+        redo.setBorderPainted(false);
+        redo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetActionPerformed(evt);
+                redoActionPerformed(evt);
             }
         });
-        getContentPane().add(reset);
-        reset.setBounds(280, 120, 30, 30);
+        getContentPane().add(redo);
+        redo.setBounds(260, 120, 30, 30);
 
         back.setBackground(new java.awt.Color(204, 204, 204));
         back.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
@@ -535,7 +536,10 @@ public class board extends javax.swing.JFrame {
         o16.setText(Integer.toString(game2048.Board[3][3]));*/
     }
     private void undoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_undoActionPerformed
-        
+    
+        game2048.loadundo();
+            showboard();
+            start.requestFocus();
     }//GEN-LAST:event_undoActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
@@ -544,14 +548,21 @@ public class board extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_backActionPerformed
 
-    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resetActionPerformed
-
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
+         int output = JOptionPane.showConfirmDialog(null
+               ,"Start new game???","Confirm",JOptionPane.YES_NO_OPTION);
+
+            if(output == JOptionPane.YES_OPTION){
+              
+               
+        for ( int i = 0 ; i < 4 ; i ++) {
+            for (int j = 0 ; j < 4 ; j ++ ) {
+                game2048.Board[i][j] = 0;
+            }
+        }
         game2048.addRandom();
         showboard();
-        start.requestFocus();
+        start.requestFocus();}
     }//GEN-LAST:event_startActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
@@ -576,6 +587,12 @@ public class board extends javax.swing.JFrame {
             showboard();
         }
     }//GEN-LAST:event_startKeyPressed
+
+    private void redoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redoActionPerformed
+         game2048.loadredo();
+            showboard();
+            start.requestFocus();
+    }//GEN-LAST:event_redoActionPerformed
     private void keyPressed(java.awt.event.KeyEvent evt) {
         
     }
@@ -637,7 +654,7 @@ public class board extends javax.swing.JFrame {
     public static javax.swing.JLabel o7;
     public static javax.swing.JLabel o8;
     public static javax.swing.JLabel o9;
-    private javax.swing.JButton reset;
+    private javax.swing.JButton redo;
     private javax.swing.JButton start;
     private javax.swing.JButton undo;
     // End of variables declaration//GEN-END:variables

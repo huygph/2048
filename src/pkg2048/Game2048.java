@@ -2,12 +2,18 @@
 package pkg2048;
 import java.util.Random;
 import java.lang.Math;
+import java.util.Stack;
+import javax.swing.JOptionPane;
 public class Game2048 extends javax.swing.JFrame {
     public int [][] Board;
-
+    public Stack<Integer> undo;
+    public Stack<Integer> redo;
+    public int [] array;
     public Game2048(){
         Board = new int[4][4];
-        
+        undo = new Stack<Integer>();
+        redo = new Stack<Integer>();
+        array = new int[15];
     }
  
     public void PrintArray() {
@@ -34,12 +40,12 @@ public class Game2048 extends javax.swing.JFrame {
                  if ( a == 1)
                      a =2;
                 Board[x][y] = a;}
-        else 
+        else
             addRandom();
         }
 
     public void Up() {
-        
+        saveundo();
     for ( int j = 0; j < 4; j++){
          String[] checkCombine = { "no", "no","no","no"};
             for (int i = 1; i <4;i++){
@@ -76,7 +82,7 @@ public class Game2048 extends javax.swing.JFrame {
     addRandom();
 }
      public void Down() {
-      
+      saveundo();
           
     for ( int j = 0; j < 4; j++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -114,7 +120,7 @@ public class Game2048 extends javax.swing.JFrame {
     addRandom();
 }
     public void Left() {
-        
+        saveundo();
          
     for ( int i = 0; i < 4; i++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -152,7 +158,7 @@ public class Game2048 extends javax.swing.JFrame {
 }
     addRandom();}
         public void Right() {
-        
+        saveundo();
          
     for ( int i = 0; i < 4; i++){
         String[] checkCombine = { "no", "no","no","no"};
@@ -188,5 +194,41 @@ public class Game2048 extends javax.swing.JFrame {
             }
 } addRandom();
 }
+    public void saveundo() {
+        for ( int i = 0 ; i < 4 ; i ++) {
+            for (int j = 0 ; j < 4 ; j ++ ) {
+                undo.push(Board[i][j]);
+            }
+        }
+    }
+    public void saveredo() {
+        for ( int i = 0 ; i < 4 ; i ++) {
+            for (int j = 0 ; j < 4 ; j ++ ) {
+                redo.push(Board[i][j]);
+            }
+        }
+    }
+     public void loadundo() {
+        if (undo.isEmpty())
+            JOptionPane.showMessageDialog(null,"Can not Undo");
+        else {
+            saveredo();
+         for ( int i = 3 ; i >= 0 ; i --) {
+            for (int j = 3 ; j >= 0 ; j -- ) {
+                Board[i][j] = undo.pop();
+            }
+        }}
+    }
+      public void loadredo() {
+          if (redo.isEmpty())
+            JOptionPane.showMessageDialog(null,"Can not Redo");
+          else {
+              saveundo();
+        for ( int i = 3 ; i >= 0 ; i --) {
+            for (int j = 3 ; j >= 0 ; j -- ) {
+                Board[i][j] = redo.pop();
+            }
+        }}
+    }
 }
 
