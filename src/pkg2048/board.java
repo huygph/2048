@@ -553,12 +553,11 @@ public class board extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
-         int output = JOptionPane.showConfirmDialog(null
+        game2048.resetScore(); 
+        int output = JOptionPane.showConfirmDialog(null
                ,"Start new game???","Confirm",JOptionPane.YES_NO_OPTION);
 
             if(output == JOptionPane.YES_OPTION){
-              
-               
         for ( int i = 0 ; i < 4 ; i ++) {
             for (int j = 0 ; j < 4 ; j ++ ) {
                 game2048.Board[i][j] = 0;

@@ -94,15 +94,17 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
+                     int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                      score = 0;
                  }
                  else
                  {
+                     int tmp = score;
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                  score = 0;
-                 JOptionPane.showMessageDialog(null, "Game end");
                  }
             }
         }           
@@ -187,18 +189,20 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
+                     int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                      score = 0;
                  }
                  else
                  {
+                     int tmp = score;
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                  score = 0;
-                 JOptionPane.showMessageDialog(null, "Game end");
                  }
             }
-        }  
+        } 
         else {
             saveundo();
           
@@ -280,15 +284,17 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
+                     int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                      score = 0;
                  }
                  else
                  {
+                     int tmp = score;
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                  score = 0;
-                 JOptionPane.showMessageDialog(null, "Game end");
                  }
             }
         }  
@@ -374,15 +380,17 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
+                     int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                      score = 0;
                  }
                  else
                  {
+                     int tmp = score;
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
                  score = 0;
-                 JOptionPane.showMessageDialog(null, "Game end");
                  }
             }
         }  
@@ -465,6 +473,10 @@ public class Game2048 extends javax.swing.JFrame {
       public int getScore(){
         return score;
     }
+      
+      public void resetScore(){
+          score = 0;
+      }
       
     public boolean isEnd(){
             int t=0;
