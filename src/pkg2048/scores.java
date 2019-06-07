@@ -102,6 +102,11 @@ public class scores extends javax.swing.JFrame {
         jLabel6.setBounds(170, 100, 50, 20);
 
         score1.setText("jTextField1");
+        score1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                score1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(score1);
         score1.setBounds(150, 130, 80, 30);
 
@@ -135,6 +140,10 @@ public class scores extends javax.swing.JFrame {
         score2.setText("");
         score3.setText("");
     }//GEN-LAST:event_resetActionPerformed
+
+    private void score1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_score1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_score1ActionPerformed
 
     /**
      * @param args the command line arguments
