@@ -17,7 +17,7 @@ public class Game2048 extends javax.swing.JFrame {
         undo = new Stack<Integer>();
         redo = new Stack<Integer>();
         array = new int[15];
-        arrayscore = new int[5];
+        arrayscore = new int[6];
     }
  
     public void PrintArray() {
@@ -55,6 +55,7 @@ public class Game2048 extends javax.swing.JFrame {
     public void Up() {
         
         int t = 0;
+        int pos;
         for (int a = 0; a < 4; a ++) {
            
             if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a]) && (Board[2][a] != Board[3][a]) && Board[3][a] != 0 && Board[2][a] != 0 && Board[1][a] != 0 && Board[0][a] != 0 )
@@ -82,7 +83,28 @@ public class Game2048 extends javax.swing.JFrame {
         if (t==4)
         {
             if (isEnd() == true)
+            {
+                 if (score > arrayscore[4])
+                 {
+                     for (pos = 4 ; pos>=0 ; pos--)
+                     {
+                         if (score > arrayscore[pos])
+                             arrayscore[pos+1] = arrayscore[pos];
+                         else 
+                             break;
+                     }
+                     arrayscore[pos+1] = score;
+                     int tmp = arrayscore[0];
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, number);
+                     score = 0;
+                 }
+                 else
+                 {
+                 score = 0;
                  JOptionPane.showMessageDialog(null, "Game end");
+                 }
+            }
         }           
         else {
             saveundo();
@@ -126,6 +148,7 @@ public class Game2048 extends javax.swing.JFrame {
 }
      public void Down() {
       int t = 0;
+      int pos;
         for (int a = 0; a < 4; a ++) {
            
             if ( (Board[0][a] != Board[1][a])&& (Board[1][a] != Board[2][a]) && (Board[2][a] != Board[3][a]) && Board[3][a] != 0 && Board[2][a] != 0 && Board[1][a] != 0 && Board[0][a] != 0 )
@@ -153,8 +176,29 @@ public class Game2048 extends javax.swing.JFrame {
         if (t==4)
         {
             if (isEnd() == true)
+            {
+                 if (score > arrayscore[4])
+                 {
+                     for (pos = 4 ; pos>=0 ; pos--)
+                     {
+                         if (score > arrayscore[pos])
+                             arrayscore[pos+1] = arrayscore[pos];
+                         else 
+                             break;
+                     }
+                     arrayscore[pos+1] = score;
+                     int tmp = arrayscore[0];
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, number);
+                     score = 0;
+                 }
+                 else
+                 {
+                 score = 0;
                  JOptionPane.showMessageDialog(null, "Game end");
-        } 
+                 }
+            }
+        }  
         else {
             saveundo();
           
@@ -197,6 +241,7 @@ public class Game2048 extends javax.swing.JFrame {
      }
     public void Left() {
         int t = 0;
+        int pos;
         for (int a = 0; a < 4; a ++) {
            
             if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3])  && Board[a][3] != 0 && Board[a][0] != 0 && Board[a][1] != 0 && Board[a][2] != 0 )
@@ -224,8 +269,29 @@ public class Game2048 extends javax.swing.JFrame {
         if (t==4)
         {
             if (isEnd() == true)
+            {
+                 if (score > arrayscore[4])
+                 {
+                     for (pos = 4 ; pos>=0 ; pos--)
+                     {
+                         if (score > arrayscore[pos])
+                             arrayscore[pos+1] = arrayscore[pos];
+                         else 
+                             break;
+                     }
+                     arrayscore[pos+1] = score;
+                     int tmp = arrayscore[0];
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, number);
+                     score = 0;
+                 }
+                 else
+                 {
+                 score = 0;
                  JOptionPane.showMessageDialog(null, "Game end");
-        } 
+                 }
+            }
+        }  
         else {
             saveundo();
           
@@ -269,6 +335,7 @@ public class Game2048 extends javax.swing.JFrame {
     }
         public void Right() {
         int t = 0;
+        int pos;
         for (int a = 0; a < 4; a ++) {
            
             if ( (Board[a][0] != Board[a][1])&& (Board[a][1] != Board[a][2]) && (Board[a][2] != Board[a][3])  && Board[a][3] != 0 && Board[a][0] != 0 && Board[a][1] != 0 && Board[a][2] != 0 )
@@ -296,8 +363,29 @@ public class Game2048 extends javax.swing.JFrame {
         if (t==4)
         {
             if (isEnd() == true)
+            {
+                 if (score > arrayscore[4])
+                 {
+                     for (pos = 4 ; pos>=0 ; pos--)
+                     {
+                         if (score > arrayscore[pos])
+                             arrayscore[pos+1] = arrayscore[pos];
+                         else 
+                             break;
+                     }
+                     arrayscore[pos+1] = score;
+                     int tmp = arrayscore[0];
+                     String number = Integer.toString(tmp);
+                     JOptionPane.showMessageDialog(null, number);
+                     score = 0;
+                 }
+                 else
+                 {
+                 score = 0;
                  JOptionPane.showMessageDialog(null, "Game end");
-        } 
+                 }
+            }
+        }  
         else {
             saveundo();
           
