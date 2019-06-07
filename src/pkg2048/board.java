@@ -220,7 +220,7 @@ public class board extends javax.swing.JFrame {
 
         back.setBackground(new java.awt.Color(204, 204, 204));
         back.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/back.PNG"))); // NOI18N
+        back.setText("Back");
         back.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         back.setBorderPainted(false);
         back.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -232,10 +232,9 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(back);
         back.setBounds(210, 430, 64, 26);
 
-        start.setBackground(new java.awt.Color(255, 255, 255));
+        start.setBackground(new java.awt.Color(204, 204, 204));
         start.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
-        start.setForeground(new java.awt.Color(255, 255, 255));
-        start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/start.PNG"))); // NOI18N
+        start.setText("Start");
         start.setBorderPainted(false);
         start.setPreferredSize(new java.awt.Dimension(64, 26));
         start.addActionListener(new java.awt.event.ActionListener() {
