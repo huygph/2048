@@ -626,5 +626,46 @@ public class Game2048 extends javax.swing.JFrame {
           else
             return false;
       }
+    
+    
+    public void loadundo() {
+        if (undo.isEmpty())
+            JOptionPane.showMessageDialog(null,"Can not Undo");
+        else {
+            saveredo();
+         for ( int i = 3 ; i >= 0 ; i --) {
+            for (int j = 3 ; j >= 0 ; j -- ) {
+                Board[i][j] = undo.pop();
+            }
+        }}
+    }
+      public void loadredo() {
+          if (redo.isEmpty())
+            JOptionPane.showMessageDialog(null,"Can not Redo");
+          else {
+              saveundo();
+        for ( int i = 3 ; i >= 0 ; i --) {
+            for (int j = 3 ; j >= 0 ; j -- ) {
+                Board[i][j] = redo.pop();
+            }
+        }}
+    }
+      
+      public int getScore(){
+        return score;
+    }
+      public int getScore1(){
+          return arrayscore[0];
+      }
+      public int getScore2(){
+          return arrayscore[1];
+      }
+      public int getScore3(){
+          return arrayscore[2];
+      }
+      
+      public void resetScore(){
+          score = 0;
+      }
 }
 
