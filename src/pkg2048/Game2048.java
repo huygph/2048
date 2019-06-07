@@ -9,6 +9,7 @@ public class Game2048 extends javax.swing.JFrame {
     private int score;
     public Stack<Integer> undo;
     public Stack<Integer> redo;
+    public int [] arrayscore;
     public int [] array;
     public String checkend;
     public Game2048(){
@@ -16,6 +17,7 @@ public class Game2048 extends javax.swing.JFrame {
         undo = new Stack<Integer>();
         redo = new Stack<Integer>();
         array = new int[15];
+        arrayscore = new int[5];
     }
  
     public void PrintArray() {
@@ -77,8 +79,11 @@ public class Game2048 extends javax.swing.JFrame {
             
             
         }
-        if ( isEnd() == true ) 
-            JOptionPane.showMessageDialog(null, "Game end");
+        if (t==4)
+        {
+            if (isEnd() == true)
+                 JOptionPane.showMessageDialog(null, "Game end");
+        }           
         else {
             saveundo();
     for ( int j = 0; j < 4; j++){
@@ -145,8 +150,11 @@ public class Game2048 extends javax.swing.JFrame {
             
             
         }
-        if ( isEnd() == true ) 
-            JOptionPane.showMessageDialog(null, "Game end");
+        if (t==4)
+        {
+            if (isEnd() == true)
+                 JOptionPane.showMessageDialog(null, "Game end");
+        } 
         else {
             saveundo();
           
@@ -213,8 +221,11 @@ public class Game2048 extends javax.swing.JFrame {
             
             
         }
-        if ( isEnd() == true ) 
-            JOptionPane.showMessageDialog(null, "Game end");
+        if (t==4)
+        {
+            if (isEnd() == true)
+                 JOptionPane.showMessageDialog(null, "Game end");
+        } 
         else {
             saveundo();
           
@@ -282,8 +293,11 @@ public class Game2048 extends javax.swing.JFrame {
             
             
         }
-        if ( isEnd() == true ) 
-            JOptionPane.showMessageDialog(null, "Game end");
+        if (t==4)
+        {
+            if (isEnd() == true)
+                 JOptionPane.showMessageDialog(null, "Game end");
+        } 
         else {
             saveundo();
           
