@@ -56,124 +56,124 @@ public class board extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
-        o9.setBackground(new java.awt.Color(255, 204, 0));
+        o9.setBackground(new java.awt.Color(204, 204, 204));
         o9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         o9.setOpaque(true);
         getContentPane().add(o9);
-        o9.setBounds(80, 280, 60, 60);
+        o9.setBounds(70, 280, 64, 64);
 
-        o2.setBackground(new java.awt.Color(255, 255, 153));
+        o2.setBackground(new java.awt.Color(204, 204, 204));
         o2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o2.setOpaque(true);
         getContentPane().add(o2);
-        o2.setBounds(140, 160, 60, 60);
+        o2.setBounds(140, 140, 64, 64);
 
-        o1.setBackground(new java.awt.Color(255, 204, 0));
+        o1.setBackground(new java.awt.Color(204, 204, 204));
         o1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o1.setOpaque(true);
         getContentPane().add(o1);
-        o1.setBounds(80, 160, 60, 60);
+        o1.setBounds(70, 140, 64, 64);
 
-        o4.setBackground(new java.awt.Color(255, 255, 153));
+        o4.setBackground(new java.awt.Color(204, 204, 204));
         o4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o4.setOpaque(true);
         getContentPane().add(o4);
-        o4.setBounds(260, 160, 60, 60);
+        o4.setBounds(280, 140, 64, 64);
 
-        o12.setBackground(new java.awt.Color(255, 255, 153));
+        o12.setBackground(new java.awt.Color(204, 204, 204));
         o12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o12.setOpaque(true);
         getContentPane().add(o12);
-        o12.setBounds(260, 280, 60, 60);
+        o12.setBounds(280, 280, 64, 64);
 
-        o3.setBackground(new java.awt.Color(255, 204, 0));
+        o3.setBackground(new java.awt.Color(204, 204, 204));
         o3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o3.setOpaque(true);
         getContentPane().add(o3);
-        o3.setBounds(200, 160, 60, 60);
+        o3.setBounds(210, 140, 64, 64);
 
-        o10.setBackground(new java.awt.Color(255, 255, 153));
+        o10.setBackground(new java.awt.Color(204, 204, 204));
         o10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o10.setOpaque(true);
         getContentPane().add(o10);
-        o10.setBounds(140, 280, 60, 60);
+        o10.setBounds(140, 280, 64, 64);
 
-        o8.setBackground(new java.awt.Color(255, 204, 0));
+        o8.setBackground(new java.awt.Color(204, 204, 204));
         o8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o8.setOpaque(true);
         getContentPane().add(o8);
-        o8.setBounds(260, 220, 60, 60);
+        o8.setBounds(280, 210, 64, 64);
 
-        o6.setBackground(new java.awt.Color(255, 204, 0));
+        o6.setBackground(new java.awt.Color(204, 204, 204));
         o6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o6.setOpaque(true);
         getContentPane().add(o6);
-        o6.setBounds(140, 220, 60, 60);
+        o6.setBounds(140, 210, 64, 64);
 
-        o13.setBackground(new java.awt.Color(255, 255, 153));
+        o13.setBackground(new java.awt.Color(204, 204, 204));
         o13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o13.setOpaque(true);
         getContentPane().add(o13);
-        o13.setBounds(80, 340, 60, 60);
+        o13.setBounds(70, 350, 64, 64);
 
-        o5.setBackground(new java.awt.Color(255, 255, 153));
+        o5.setBackground(new java.awt.Color(204, 204, 204));
         o5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o5.setOpaque(true);
         getContentPane().add(o5);
-        o5.setBounds(80, 220, 60, 60);
+        o5.setBounds(70, 210, 64, 64);
 
-        o11.setBackground(new java.awt.Color(255, 204, 0));
+        o11.setBackground(new java.awt.Color(204, 204, 204));
         o11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o11.setOpaque(true);
         getContentPane().add(o11);
-        o11.setBounds(200, 280, 60, 60);
+        o11.setBounds(210, 280, 64, 64);
 
-        o15.setBackground(new java.awt.Color(255, 255, 153));
+        o15.setBackground(new java.awt.Color(204, 204, 204));
         o15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o15.setOpaque(true);
         getContentPane().add(o15);
-        o15.setBounds(200, 340, 60, 60);
+        o15.setBounds(210, 350, 64, 64);
 
-        o14.setBackground(new java.awt.Color(255, 204, 0));
+        o14.setBackground(new java.awt.Color(204, 204, 204));
         o14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o14.setOpaque(true);
         getContentPane().add(o14);
-        o14.setBounds(140, 340, 60, 60);
+        o14.setBounds(140, 350, 64, 64);
 
-        o7.setBackground(new java.awt.Color(255, 255, 153));
+        o7.setBackground(new java.awt.Color(204, 204, 204));
         o7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o7.setOpaque(true);
         getContentPane().add(o7);
-        o7.setBounds(200, 220, 60, 60);
+        o7.setBounds(210, 210, 64, 64);
 
-        o16.setBackground(new java.awt.Color(255, 204, 0));
+        o16.setBackground(new java.awt.Color(204, 204, 204));
         o16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        o16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        o16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         o16.setOpaque(true);
         getContentPane().add(o16);
-        o16.setBounds(260, 340, 60, 60);
+        o16.setBounds(280, 350, 64, 64);
 
         jLabel21.setFont(new java.awt.Font("Cambria Math", 0, 36)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("2048");
         getContentPane().add(jLabel21);
-        jLabel21.setBounds(40, 60, 100, 40);
+        jLabel21.setBounds(40, 40, 100, 40);
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
         jLabel2.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
@@ -181,7 +181,7 @@ public class board extends javax.swing.JFrame {
         jLabel2.setText("2048");
         jLabel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "High Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(270, 60, 100, 40);
+        jLabel2.setBounds(270, 40, 100, 40);
 
         Jscore.setBackground(new java.awt.Color(153, 153, 153));
         Jscore.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
@@ -190,12 +190,12 @@ public class board extends javax.swing.JFrame {
         Jscore.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
         Jscore.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(Jscore);
-        Jscore.setBounds(170, 60, 90, 40);
+        Jscore.setBounds(170, 40, 90, 40);
 
         undo.setBackground(new java.awt.Color(255, 255, 255));
         undo.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
         undo.setForeground(new java.awt.Color(255, 255, 255));
-        undo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/icons8-undo-24.png"))); // NOI18N
+        undo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/undo.png"))); // NOI18N
         undo.setBorderPainted(false);
         undo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,12 +203,12 @@ public class board extends javax.swing.JFrame {
             }
         });
         getContentPane().add(undo);
-        undo.setBounds(210, 120, 30, 30);
+        undo.setBounds(220, 90, 30, 30);
 
         redo.setBackground(new java.awt.Color(255, 255, 255));
         redo.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
         redo.setForeground(new java.awt.Color(255, 255, 255));
-        redo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/redo.png"))); // NOI18N
+        redo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/redo2.png"))); // NOI18N
         redo.setBorderPainted(false);
         redo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,11 +216,13 @@ public class board extends javax.swing.JFrame {
             }
         });
         getContentPane().add(redo);
-        redo.setBounds(260, 120, 30, 30);
+        redo.setBounds(280, 90, 30, 30);
 
         back.setBackground(new java.awt.Color(204, 204, 204));
-        back.setFont(new java.awt.Font("Cambria Math", 0, 11)); // NOI18N
-        back.setText("Back");
+        back.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/back.PNG"))); // NOI18N
+        back.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        back.setBorderPainted(false);
         back.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,9 +230,14 @@ public class board extends javax.swing.JFrame {
             }
         });
         getContentPane().add(back);
-        back.setBounds(210, 440, 60, 23);
+        back.setBounds(210, 430, 64, 26);
 
-        start.setText("Start");
+        start.setBackground(new java.awt.Color(255, 255, 255));
+        start.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
+        start.setForeground(new java.awt.Color(255, 255, 255));
+        start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/start.PNG"))); // NOI18N
+        start.setBorderPainted(false);
+        start.setPreferredSize(new java.awt.Dimension(64, 26));
         start.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startActionPerformed(evt);
@@ -242,9 +249,10 @@ public class board extends javax.swing.JFrame {
             }
         });
         getContentPane().add(start);
-        start.setBounds(100, 440, 57, 23);
+        start.setBounds(140, 430, 64, 26);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Fractal Wallpapers-part-1 (311).jpg"))); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(255, 255, 204));
+        jLabel3.setOpaque(true);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 380, 510);
 
@@ -560,6 +568,8 @@ public class board extends javax.swing.JFrame {
         game2048.addRandom();
         showboard();
         start.requestFocus();}
+        
+            
     }//GEN-LAST:event_startActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
