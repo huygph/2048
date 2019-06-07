@@ -94,9 +94,7 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
-                     String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end");
                      score = 0;
                  }
                  else
@@ -187,9 +185,7 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
-                     String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end");
                      score = 0;
                  }
                  else
@@ -280,9 +276,7 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
-                     String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end");
                      score = 0;
                  }
                  else
@@ -374,9 +368,7 @@ public class Game2048 extends javax.swing.JFrame {
                              break;
                      }
                      arrayscore[pos+1] = score;
-                     int tmp = arrayscore[0];
-                     String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, number);
+                     JOptionPane.showMessageDialog(null, "Game end");
                      score = 0;
                  }
                  else
@@ -465,6 +457,10 @@ public class Game2048 extends javax.swing.JFrame {
       public int getScore(){
         return score;
     }
+      
+      public void resetScore(){
+          score = 0;
+      }
       
     public boolean isEnd(){
             int t=0;
