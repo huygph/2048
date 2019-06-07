@@ -633,96 +633,7 @@ public class Game2048 extends javax.swing.JFrame {
 
 
 
-    for ( int i = 0; i < 4; i++){
-        String[] checkCombine = { "no", "no","no","no"};
-            for (int j = 2; j >-1;j--){
-                if ( Board[i][j] != 0) {
-                    int num = Board[i][j];
-                    int J = j + 1;
-                    // 
-                    while (( J<4 ) && (Board[i][J]==0) ){
-                        J++;
-                    }
-                    if ( J == 4){
-                        Board[i][3] = num;
-                        Board[i][j] = 0;
-                    }
-                    //
-                    else if ( Board[i][J] != num){
-                        Board[i][j] = 0;
-                        Board[i][J-1] = num;
-                        
-                    }
-                    else {
-                        if (checkCombine[J] == "combined") {
-                            Board[i][j] = 0;
-                        Board[i][J-1] = num;
-                        }
-                        else {
-                        Board[i][J] *= 2;
-                        score += Board[i][J];
-                        checkCombine[J] = "combined";
-                        Board[i][j] = 0;}
-                    }
-                }
-            }
-} addRandom();}
-}
-    public void saveundo() {
-        for ( int i = 0 ; i < 4 ; i ++) {
-            for (int j = 0 ; j < 4 ; j ++ ) {
-                undo.push(Board[i][j]);
-            }
-        }
-    }
-    public void saveredo() {
-        for ( int i = 0 ; i < 4 ; i ++) {
-            for (int j = 0 ; j < 4 ; j ++ ) {
-                redo.push(Board[i][j]);
-            }
-        }
-    }
-     public void loadundo() {
-        if (undo.isEmpty())
-            JOptionPane.showMessageDialog(null,"Can not Undo");
-        else {
-            saveredo();
-         for ( int i = 3 ; i >= 0 ; i --) {
-            for (int j = 3 ; j >= 0 ; j -- ) {
-                Board[i][j] = undo.pop();
-            }
-        }}
-    }
-      public void loadredo() {
-          if (redo.isEmpty())
-            JOptionPane.showMessageDialog(null,"Can not Redo");
-          else {
-              saveundo();
-        for ( int i = 3 ; i >= 0 ; i --) {
-            for (int j = 3 ; j >= 0 ; j -- ) {
-                Board[i][j] = redo.pop();
-            }
-        }}
-    }
-      
-      public int getScore(){
-        return score;
-    }
-      public int getScore1(){
-          return arrayscore[0];
-      }
-      public int getScore2(){
-          return arrayscore[1];
-      }
-      public int getScore3(){
-          return arrayscore[2];
-      }
-      
-      public void resetScore(){
-          score = 0;
-      }
-      
-    public boolean isEnd(){
+public boolean isEnd(){
             int t=0;
             int a;
            for ( a = 0; a < 4; a ++) {
@@ -817,4 +728,3 @@ public class Game2048 extends javax.swing.JFrame {
           else
             return false;
       }
-
