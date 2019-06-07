@@ -36,7 +36,7 @@ public class board extends javax.swing.JFrame {
         o7 = new javax.swing.JLabel();
         o16 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        HighScore = new javax.swing.JLabel();
         Jscore = new javax.swing.JLabel();
         undo = new javax.swing.JButton();
         redo = new javax.swing.JButton();
@@ -175,13 +175,13 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jLabel21);
         jLabel21.setBounds(40, 40, 100, 40);
 
-        jLabel2.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel2.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("2048");
-        jLabel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "High Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(270, 40, 100, 40);
+        HighScore.setBackground(new java.awt.Color(153, 153, 153));
+        HighScore.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
+        HighScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        HighScore.setText("2048");
+        HighScore.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "High Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria Math", 1, 14))); // NOI18N
+        getContentPane().add(HighScore);
+        HighScore.setBounds(270, 40, 100, 40);
 
         Jscore.setBackground(new java.awt.Color(153, 153, 153));
         Jscore.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
@@ -579,21 +579,25 @@ public class board extends javax.swing.JFrame {
             game2048.Up();
             showboard();
             updateScore();
+            updateHighscore();
         }
          if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
             game2048.Left();
             showboard();
             updateScore();
+            updateHighscore();
         }
           if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
             game2048.Down();
             showboard();
             updateScore();
+            updateHighscore();
         }
            if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
             game2048.Right();
             showboard();
             updateScore();
+            updateHighscore();
         }
     }//GEN-LAST:event_startKeyPressed
 
@@ -608,6 +612,9 @@ public class board extends javax.swing.JFrame {
     public void updateScore(){
                 Jscore.setText(Integer.toString(game2048.getScore()));
             }
+    public void updateHighscore(){
+                HighScore.setText(Integer.toString(game2048.getScore1()));
+    }
     
     /**
      * @param args the command line arguments
@@ -645,9 +652,9 @@ public class board extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HighScore;
     private javax.swing.JLabel Jscore;
     private javax.swing.JButton back;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel o1;

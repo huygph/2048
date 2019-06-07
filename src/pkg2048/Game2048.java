@@ -473,6 +473,9 @@ public class Game2048 extends javax.swing.JFrame {
       public int getScore(){
         return score;
     }
+      public int getScore1(){
+          return arrayscore[0];
+      }
       
       public void resetScore(){
           score = 0;
