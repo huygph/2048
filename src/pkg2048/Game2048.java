@@ -1,8 +1,12 @@
 
 package pkg2048;
+import java.io.File;
 import java.util.Random;
 import java.lang.Math;
 import java.util.Stack;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 public class Game2048 extends javax.swing.JFrame {
     public int [][] Board;
@@ -96,15 +100,25 @@ public class Game2048 extends javax.swing.JFrame {
                      arrayscore[pos+1] = score;
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
                      score = 0;
                  }
                  else
                  {
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
-                 score = 0;
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
+                     score = 0;
                  }
             }
         }           
@@ -191,18 +205,28 @@ public class Game2048 extends javax.swing.JFrame {
                      arrayscore[pos+1] = score;
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
                      score = 0;
                  }
                  else
                  {
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
-                 score = 0;
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
+                     score = 0;
                  }
             }
-        } 
+        }  
         else {
             saveundo();
           
@@ -286,15 +310,25 @@ public class Game2048 extends javax.swing.JFrame {
                      arrayscore[pos+1] = score;
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
                      score = 0;
                  }
                  else
                  {
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
-                 score = 0;
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
+                     score = 0;
                  }
             }
         }  
@@ -382,15 +416,25 @@ public class Game2048 extends javax.swing.JFrame {
                      arrayscore[pos+1] = score;
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
                      score = 0;
                  }
                  else
                  {
                      int tmp = score;
                      String number = Integer.toString(tmp);
-                     JOptionPane.showMessageDialog(null, "Game end "+ "your score is " + number);
-                 score = 0;
+                     Sound_cdjv sound=new Sound_cdjv("C:\\Users\\Admin\\Documents\\GitHub\\2048\\src\\pkg2048\\music.wav");
+                     sound.start();
+                     int output = JOptionPane.showConfirmDialog(null,"Your score is " + number,"Confirm",JOptionPane.YES_NO_OPTION);
+                     if(output == JOptionPane.YES_OPTION){
+                      sound.suspend();
+                     }
+                     score = 0;
                  }
             }
         }  
